@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MessageService } from '../message.service';
-import { ThemeService } from '../theme.service';
 
 @Component({
   selector: 'app-messages',
@@ -12,16 +11,9 @@ export class MessagesComponent {
 
   
   public messageService: MessageService; // Angular only binds to public component properties. The messageService property must be public because you're going to bind to it in the template.
-  
-  private _themeService: ThemeService;
 
-  constructor(messageService: MessageService, themeService: ThemeService) {
+  constructor(messageService: MessageService) {
     this.messageService = messageService;
-    this._themeService = themeService;
-  }
-
-  toggle(): void {
-    this._themeService.toggleTheme();
   }
 
 }
