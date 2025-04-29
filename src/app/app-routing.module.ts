@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router'; // so the application can have routing capability.
 import { HeroesComponent } from './heroes/heroes.component'; // gives router somewhere to go once you configure the routes.
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 const routes: Routes = [
   {path: 'heroes', component: HeroesComponent}, // path: a string that matches the url in the browser address bar. Component: The component that the router should create when navigating to this route..
   {path: 'dashboard', component: DashboardComponent},
-  {path: '', redirectTo: '/dashboard', pathMatch: 'full'}
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full'},
+  {path: 'detail/:id', component: HeroDetailComponent}
 ];
 
 @NgModule({

@@ -24,12 +24,14 @@ export class HeroesComponent implements OnInit { // angular still does ngOnInit 
 
   heroes: Hero[] = [];
 
-  selectedHero?: Hero;
+  // selectedHero?: Hero;
 
+  /*
   onSelect(hero: Hero): void {
     this.selectedHero = hero;
     this._messageService.add(`HeroesComponent: selectedHero: id=${hero.id}`); // template literal, needs backticks.
   }
+    */
 
   getHeroes(): void {
     this._heroService.getHeroes()
